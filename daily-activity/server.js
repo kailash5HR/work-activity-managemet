@@ -349,11 +349,7 @@ app.delete("/api/activities/:id", requireAuth, (req, res) => {
 if (fs.existsSync(DIST_DIR)) {
   app.use(express.static(DIST_DIR));
 
-  app.get("*", (req, res) => {
-    if (req.path.startsWith("/api")) {
-      return res.status(404).json({ message: "API route not found" });
-    }
-
+  app.get(/^\/(?!api).*/, (req, res) => {
     res.sendFile(path.join(DIST_DIR, "index.html"));
   });
 }
