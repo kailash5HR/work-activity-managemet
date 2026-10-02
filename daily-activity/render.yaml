@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: daily-activity
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: HOST
+        value: 0.0.0.0
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: https://your-app.onrender.com

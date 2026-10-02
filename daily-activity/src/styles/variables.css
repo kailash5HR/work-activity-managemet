@@ -1,0 +1,20 @@
+:root {
+  --paper: #F6F3EC;
+  --paper-2: #EFECE1;
+  --card: #FFFFFF;
+
+  --ink: #24211A;
+  --ink-2: #5D5849;
+  --ink-3: #7E7867;
+
+  --line: #E7E2D4;
+  --line-2: #D8D2C0;
+
+  --brand: #1E6A4C;
+  --brand-ink: #144F37;
+  --brand-tint: #E4EEE5;
+
+  --high: #C0492D;
+  --medium: #9C7208;
+  --low: #66744E;
+}
