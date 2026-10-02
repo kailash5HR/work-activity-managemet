@@ -2,6 +2,7 @@ services:
   - type: web
     name: daily-activity
     env: node
+    rootDir: daily-activity
     plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
